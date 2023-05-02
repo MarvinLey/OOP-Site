@@ -1,10 +1,10 @@
 <?php
-
-if(isset($_POST["submit"]))
+require_once "funktionen.inc.php";
+if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     // Grabbing the data
-    $uid = $_POST["uid"];
-    $pwd = $_POST["pwd"];
+    $uid = bereinige($_POST["uid"]);
+    $pwd = bereinige($_POST["pwd"]);
     //Instantiate SignupContr class
     include "../classes/dbh.classes.php";
     include "../classes/login.classes.php";
