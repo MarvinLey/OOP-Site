@@ -1,0 +1,2 @@
+<h2>Startseite</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est nobis, molestias ut eligendi nesciunt, vero veritatis neque recusandae rem voluptatibus velit totam id dolores sit impedit reprehenderit, laborum a!</p>
