@@ -44,7 +44,7 @@ class SignupContr extends Signup{
 
     private function emptyInput() {
         $result = false;
-        if(empty($this->uid || $this->pwd || $this->pwdrepeat || $this->email)) {
+        if(empty($this->uid) || empty($this->pwd) || empty($this->pwdrepeat) || empty($this->email)) {
             $result = false;
         }
         else {
@@ -55,7 +55,7 @@ class SignupContr extends Signup{
 
     private function invalidUid() {
         $result = false;
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)) {
+        if (!preg_match("/^[a-zA-Z0-9]{2,20}$/", $this->uid)) {
             $result = false;
         }
         else {
@@ -95,6 +95,11 @@ class SignupContr extends Signup{
             $result = true;
         }
         return $result;
+    }
+
+    public function fetchUserId($uid){
+        $userId = $this->getUserId($uid);
+        return $userId[0]["user_id"];
     }
 
 }
