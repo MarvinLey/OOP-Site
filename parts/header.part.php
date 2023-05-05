@@ -9,6 +9,8 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/style.css">
+    <script src="bootstrap/bootstrap/js/bootstrap.js"></script>
     <title>Webentwicklung</title>
 </head>
 
@@ -18,36 +20,42 @@ session_start();
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light ">
                     <a class="navbar-brand text-white fw-bold" href="#">Marvin Leyendecker</a>
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Produkte">Produkte</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Mitglieder+">Mitglied+</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Gästebuch">Gästebuch</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="index.php?page=register-login">Registrierung</a></li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto">
-                        <?php
-                        if (isset($_SESSION["userid"])) {
-                        ?>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="index.php?page=profile">
-                                    <?php echo "Willkommen, " . $_SESSION["useruid"]; ?>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="btn btn-primary" href="inc/logout.inc.php">Abmelden</a>
-                            </li>
-                        <?php
-                        } else {
-                        ?>
-                            <li class="nav-item"><a class="nav-link text-white" href="#">Registrieren</a></li>
-                            <li class="nav-item"><a class="nav-link text-white" href="#">Anmelden</a></li>
-                        <?php
-                        }
-                        ?>
-                    </ul>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Produkte">Produkte</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Mitglieder+">Mitglied+</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Pinnwand">Pinnwand</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="index.php?page=register-login">Registrierung</a></li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <?php
+                            if (isset($_SESSION["userid"])) {
+                            ?>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="index.php?page=profile">
+                                        <?php echo "Willkommen, " . $_SESSION["useruid"]; ?>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-primary" href="inc/logout.inc.php">Abmelden</a>
+                                </li>
+                            <?php
+                            } else {
+                            ?>
+                                <li class="nav-item"><a class="nav-link text-white" href="index.php?page=register-login">Registrieren</a></li>
+                                <li class="nav-item"><a class="nav-link text-white" href="index.php?page=register-login">Anmelden</a></li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+                    </div>
                 </nav>
             </header>
         </div>
     </section>
+
     <main class="m-2">
