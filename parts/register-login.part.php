@@ -1,4 +1,11 @@
-<section class="login bg-light">
+<?php
+if (isset($_SESSION["userid"])) {
+?>
+    <h3>Hallo <?php echo $_SESSION['useruid'] ?>, du bist bereits angemeldet!</h3>
+<?php
+} else {
+?>
+    <section class="login bg-light">
         <div class="container p-3">
             <div class="row">
                 <div class="col-md-6">
@@ -46,3 +53,7 @@
             </div>
         </div>
     </section>
+
+<?php
+}
+?>
