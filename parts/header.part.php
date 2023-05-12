@@ -13,7 +13,6 @@ session_start();
     <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/style.css">
     <script src="bootstrap/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="https://kit.fontawesome.com/b3e2eeae95.js" crossorigin="anonymous"></script>
 
     <title>Webentwicklung</title>
 </head>
