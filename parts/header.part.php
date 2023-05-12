@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 session_start();
 ?>
 <!DOCTYPE html>
@@ -8,9 +10,11 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/style.css">
-    <script src="bootstrap/bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://kit.fontawesome.com/b3e2eeae95.js" crossorigin="anonymous"></script>
+
     <title>Webentwicklung</title>
 </head>
 
@@ -26,9 +30,20 @@ session_start();
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Produkte">Produkte</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Produkte
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li class="nav-item"><a class="nav-link dropdown-item" href="index.php?page=produkte">Kategorie 1</a></li>
+                                    <li class="nav-item"><a class="nav-link dropdown-item" href="index.php?page=produkte.elektronik">Elektronik</a></li>
+                                    <li class="nav-item"><a class="nav-link dropdown-item" href="index.php?page=produkte.haushalt">Haushalt</a></li>
+                                </ul>
+                            </li>
+                            
+
                             <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Mitglieder+">Mitglied+</a></li>
-                            <li class="nav-item"><a class="nav-link text-white" href="index.php?page=Pinnwand">Pinnwand</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="index.php?page=pinnwand">Pinnwand</a></li>
                             <li class="nav-item"><a class="nav-link text-white" href="index.php?page=register-login">Registrierung</a></li>
                         </ul>
                         <ul class="navbar-nav ms-auto">

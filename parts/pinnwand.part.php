@@ -8,6 +8,7 @@ $postsInfo = new PostsInfoView();
 ?>
 
 <div class="posts-container">
+    <h2>Pinnwand</h2>
     <?php
     $allPosts = $postsInfo->fetchAllUsersPosts();
     foreach ($allPosts as $post) {

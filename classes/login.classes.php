@@ -29,7 +29,7 @@ class Login extends Dbh
             exit();
         }
         elseif($checkPwd == true) {
-            var_dump($uid);
+
             $stmt = $this->connect()->prepare('SELECT * FROM users WHERE (user_uid = ? OR user_email = ?) AND user_pwd = ?');
 
             if (!$stmt->execute(array($uid, $uid, $pwdHashed[0]['user_pwd']))) {

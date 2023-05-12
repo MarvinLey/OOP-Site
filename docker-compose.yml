@@ -1,0 +1,27 @@
+version: '3'
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "mysql", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 10s
+      retries: 3
+
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=oop
+    ports:
+      - 3306:3306
+    volumes:
+      - ./oop.sql:/docker-entrypoint-initdb.d/oop.sql
+
+
