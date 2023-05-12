@@ -39,7 +39,7 @@ class PostsInfo extends Dbh
 
         if ($stmt->rowCount() == 0) {
             $stmt = null;
-            header("location: ../parts/profile.php?error=postsnotfound");
+            echo "Schreibe deinen ersten Post!";
             exit();
         }
         $postsData = $stmt->fetchAll(PDO::FETCH_ASSOC);

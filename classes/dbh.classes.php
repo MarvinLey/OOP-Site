@@ -4,8 +4,8 @@ class Dbh {
     protected function connect() {
         try {
             $username = "root";
-            $password = "";
-            $dbh = new PDO('mysql:host=localhost;dbname=oop', $username, $password);
+            $password = "secret";
+            $dbh = new PDO('mysql:host=webanwendung-mysql-1;dbname=oop', $username, $password);
             return $dbh;
         } catch (PDOException $e) {
             print "Error!: " . $e->getMessage() . "<br/>";
