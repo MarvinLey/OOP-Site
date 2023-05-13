@@ -8,13 +8,13 @@ Dieses Projekt enthält eine Webanwendung, die mithilfe von Docker bereitgestell
 ## Anleitung
 
 1. Klone das Repository auf deinen lokalen Computer.
-   - `**git clone <URL des Repositories>**`
+   - `git clone <URL des Repositories>`
 
 2. Navigiere in das Verzeichnis der Webanwendung.
-   - `**cd webanwendung**`
+   - `cd webanwendung`
 
 3. Starte die Docker Container im Hintergrund.
-   - `**docker-compose up -d**`
+   - `docker-compose up -d`
 
 4. Öffne deinen Webbrowser und gehe zur Adresse **http://localhost:3000** um auf die Anwendung zuzugreifen.
 	
